@@ -13,6 +13,7 @@ RoddRunner is a clone of [Lode Runner](https://en.wikipedia.org/wiki/Lode_Runner
 
 
 # Contrib
-I used the Lazenby Comuter font, from available at http://disasterfonts.co.uk/
+I used the Lazenby Comuter font by Andrew Young, available at http://disasterfonts.co.uk/
+To produce the characters, I used Body Mechanics Rigs by [vinchau](https://blendswap.com/profile/321006) available [here](https://blendswap.com/blend/19110=
 
 
