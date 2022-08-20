@@ -1,0 +1,84 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://actors/Actor.gd"
+}, {
+"base": "Node2D",
+"class": "Actor_Save",
+"language": "GDScript",
+"path": "res://actors/Actor_save.gd"
+}, {
+"base": "Area2D",
+"class": "Foe",
+"language": "GDScript",
+"path": "res://actors/Foe.gd"
+}, {
+"base": "Actor",
+"class": "Player",
+"language": "GDScript",
+"path": "res://actors/Player.gd"
+}, {
+"base": "Node2D",
+"class": "RoddRunnerLevel",
+"language": "GDScript",
+"path": "res://levels/RoddRunnerLevel.gd"
+}, {
+"base": "TileMap",
+"class": "RoddRunnerTilemap",
+"language": "GDScript",
+"path": "res://levels/RoddRunnerTilemap.gd"
+} ]
+_global_script_class_icons={
+"Actor": "",
+"Actor_Save": "",
+"Foe": "",
+"Player": "",
+"RoddRunnerLevel": "",
+"RoddRunnerTilemap": ""
+}
+
+[application]
+
+config/name="RoddRunner"
+run/main_scene="res://Game.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1120
+window/size/height=800
+window/vsync/use_vsync=false
+window/stretch/mode="2d"
+window/stretch/aspect="keep_width"
+
+[global]
+
+ui_left=false
+display=false
+sync=false
+
+[logging]
+
+file_logging/log_path="user://logs/trace.txt"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/fallback_to_gles2=true
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=2
+environment/default_environment="res://default_env.tres"
