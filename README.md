@@ -17,8 +17,8 @@ No music or sound for now
 Foe's AI mimics the original one but needs to be enhanced 
 
 # Contrib
-Godot is available at https://godotengine.org/
-I used the Lazenby Comuter font by Andrew Young, available at http://disasterfonts.co.uk/
-To produce the characters, I used Body Mechanics Rigs by [vinchau](https://blendswap.com/profile/321006) available [here](https://blendswap.com/blend/19110)
+* Godot is available at https://godotengine.org/
+* I used the Lazenby Comuter font by Andrew Young, available at http://disasterfonts.co.uk/
+* To produce the characters animations, I used Body Mechanics Rigs by [vinchau](https://blendswap.com/profile/321006) available [here](https://blendswap.com/blend/19110)
 
 
