@@ -17,10 +17,11 @@ const REBUILD_DELAY = 10
 var trapped_foes = Array()
 
 const TILE_MAX_X = 28
-const TILE_MAX_Y = 19
+const TILE_MAX_Y = 17
 
 var ladder_tile_id = -1
 var escape_ladder_id = -1
+var treasure_id = -1 
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +34,8 @@ func _ready():
 			ladder_tile_id = idx
 		elif tile_set.tile_get_name(idx) == "escape_ladder":
 			escape_ladder_id = idx
+		elif tile_set.tile_get_name(idx) == "treasure":
+			treasure_id = idx
 		print(idx,", name :", tile_set.tile_get_name(idx))
 		
 	destroy_timer_scene = load("res://levels/DestroyTimer.tscn")
@@ -48,6 +51,9 @@ func _ready():
 func show_escape_ladder():
 	for x in range(TILE_MAX_X):
 		for y in range(TILE_MAX_Y):
+			if x == 27:
+				pass
+			
 			if get_cell(x, y) == escape_ladder_id:
 				set_cell(x, y, ladder_tile_id)
 	
@@ -76,12 +82,9 @@ func is_tile_ladder(pos):
 	return(t == "ladder")
 
 	
-func is_tile_climbable(pos, can_climb_destroyed = false):
+func is_tile_climbable(pos):
 	var t = my_tile_get_name(get_cell(pos.x, pos.y))
-	if can_climb_destroyed:
-		return(t in ["ladder"] or is_tile_upon_ladder(pos))
-	else:
-		return(t == "ladder" or is_tile_upon_ladder(pos))
+	return(t == "ladder" or is_tile_upon_ladder(pos))
 
 
 func is_tile_under_me_floor(pos):
@@ -106,6 +109,16 @@ func is_tile_ok_to_go_down(pos):
 func is_tile_contains_treasure(pos):
 	var t = my_tile_get_name(get_cell(pos.x, pos.y))
 	return  (t == "treasure")
+
+func release_treasure(pos):
+	set_cell(pos.x, pos.y, treasure_id)
+
+func get_treasure(pos):
+	if is_tile_contains_treasure(pos):
+		set_cell(pos.x, pos.y, -1)
+		return true
+	else:
+		return false
 	
 	
 func did_i_get_treasure(pos):
@@ -131,6 +144,7 @@ func is_tile_rebuilt(pos):
 	
 
 func desintegrate_brick(pos):
+	
 	var dt = destroy_timer_scene.instance()
 	dt.position = pos
 	dt.max_count = 5
@@ -145,6 +159,7 @@ func desintegrate_brick(pos):
 
 
 func _on_destroy_brick(pos, count):
+		
 	if count < destroy_seq.size():
 		set_cell(pos.x, pos.y, destroy_seq[count])
 	else:

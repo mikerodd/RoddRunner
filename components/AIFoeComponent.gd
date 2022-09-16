@@ -29,11 +29,10 @@ func update (var actor : Actor):
 		return
 
 		
+		
 
 	
 	player_pos =  my_tilemap.world_to_map(player.position)
-	if foe.current_pos == Vector2(4,16):
-		pass
 	
 	if foe.ongoing_move == foe.action.left:
 		_wp = foe.current_pos

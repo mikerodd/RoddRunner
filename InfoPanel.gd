@@ -19,3 +19,4 @@ func update(score, women, level):
 	$Score.text = "%06d" % score
 	$Level.text = "%04d" % level
 	$Women.text = "%03d" % women
+

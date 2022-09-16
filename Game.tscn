@@ -1,8 +1,111 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://art/fonts/LazenbyCompSmooth.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://InfoPanel.gd" type="Script" id=3]
+[ext_resource path="res://art/player2/rope/0004.png" type="Texture" id=4]
+[ext_resource path="res://Help.gd" type="Script" id=5]
+[ext_resource path="res://levels/TilesetRed.tres" type="TileSet" id=6]
+[ext_resource path="res://art/player2/rope/0015.png" type="Texture" id=7]
+[ext_resource path="res://art/player2/rope/0014.png" type="Texture" id=8]
+[ext_resource path="res://art/player2/climbing/0007.png" type="Texture" id=9]
+[ext_resource path="res://art/player2/climbing/0018.png" type="Texture" id=10]
+[ext_resource path="res://art/player2/running/0014.png" type="Texture" id=11]
+[ext_resource path="res://art/player2/climbing/0012.png" type="Texture" id=12]
+[ext_resource path="res://art/player2/climbing/0008.png" type="Texture" id=13]
+[ext_resource path="res://art/player2/climbing/0001.png" type="Texture" id=14]
+[ext_resource path="res://art/player2/running/0016.png" type="Texture" id=15]
+[ext_resource path="res://art/player2/running/0007.png" type="Texture" id=16]
+[ext_resource path="res://art/player2/running/0006.png" type="Texture" id=17]
+[ext_resource path="res://art/player2/running/0017.png" type="Texture" id=18]
+[ext_resource path="res://art/player2/running/0012.png" type="Texture" id=19]
+[ext_resource path="res://art/player2/rope/0010.png" type="Texture" id=20]
+[ext_resource path="res://art/player2/rope/0002.png" type="Texture" id=21]
+[ext_resource path="res://art/player2/rope/0017.png" type="Texture" id=22]
+[ext_resource path="res://art/player2/climbing/0020.png" type="Texture" id=23]
+[ext_resource path="res://art/player2/climbing/0014.png" type="Texture" id=24]
+[ext_resource path="res://art/player2/climbing/0013.png" type="Texture" id=25]
+[ext_resource path="res://art/player2/running/0018.png" type="Texture" id=26]
+[ext_resource path="res://art/player2/running/0010.png" type="Texture" id=27]
+[ext_resource path="res://art/player2/running/0003.png" type="Texture" id=28]
+[ext_resource path="res://art/player2/running/0008.png" type="Texture" id=29]
+[ext_resource path="res://art/player2/rope/0005.png" type="Texture" id=30]
+[ext_resource path="res://art/player2/rope/0013.png" type="Texture" id=31]
+[ext_resource path="res://art/player2/running/0015.png" type="Texture" id=32]
+[ext_resource path="res://art/player2/rope/0016.png" type="Texture" id=33]
+[ext_resource path="res://art/player2/rope/0008.png" type="Texture" id=34]
+[ext_resource path="res://art/player2/rope/0009.png" type="Texture" id=35]
+[ext_resource path="res://art/player2/running/0019.png" type="Texture" id=36]
+[ext_resource path="res://art/player2/climbing/0015.png" type="Texture" id=37]
+[ext_resource path="res://art/player2/climbing/0016.png" type="Texture" id=38]
+[ext_resource path="res://art/player2/running/0011.png" type="Texture" id=39]
+[ext_resource path="res://art/player2/running/0004.png" type="Texture" id=40]
+[ext_resource path="res://art/player2/rope/0007.png" type="Texture" id=41]
+[ext_resource path="res://art/player2/rope/0000.png" type="Texture" id=42]
+[ext_resource path="res://art/player2/rope/0001.png" type="Texture" id=43]
+[ext_resource path="res://art/player2/running/0001.png" type="Texture" id=44]
+[ext_resource path="res://art/player2/climbing/0002.png" type="Texture" id=45]
+[ext_resource path="res://art/player2/running/0013.png" type="Texture" id=46]
+[ext_resource path="res://art/player2/running/0009.png" type="Texture" id=47]
+[ext_resource path="res://art/player2/running/0002.png" type="Texture" id=48]
+[ext_resource path="res://art/player2/rope/0011.png" type="Texture" id=49]
+[ext_resource path="res://art/player2/rope/0006.png" type="Texture" id=50]
+[ext_resource path="res://art/player2/rope/0018.png" type="Texture" id=51]
+[ext_resource path="res://art/player2/climbing/0005.png" type="Texture" id=52]
+[ext_resource path="res://art/player2/climbing/0006.png" type="Texture" id=53]
+[ext_resource path="res://art/player2/climbing/0004.png" type="Texture" id=54]
+[ext_resource path="res://art/player2/climbing/0000.png" type="Texture" id=55]
+[ext_resource path="res://art/player2/running/0005.png" type="Texture" id=56]
+[ext_resource path="res://art/player2/climbing/0011.png" type="Texture" id=57]
+[ext_resource path="res://art/player2/climbing/0019.png" type="Texture" id=58]
+[ext_resource path="res://art/player2/climbing/0017.png" type="Texture" id=59]
+[ext_resource path="res://art/player2/running/0020.png" type="Texture" id=60]
+[ext_resource path="res://art/player2/climbing/0010.png" type="Texture" id=61]
+[ext_resource path="res://art/player2/climbing/0009.png" type="Texture" id=62]
+[ext_resource path="res://art/player2/climbing/0003.png" type="Texture" id=63]
+[ext_resource path="res://art/player2/rope/0012.png" type="Texture" id=64]
+[ext_resource path="res://art/player2/rope/0019.png" type="Texture" id=65]
+[ext_resource path="res://art/player2/rope/0003.png" type="Texture" id=66]
+[ext_resource path="res://art/player2/falling/0002.png" type="Texture" id=67]
+[ext_resource path="res://art/player2/falling/0010.png" type="Texture" id=68]
+[ext_resource path="res://art/player2/falling/0018.png" type="Texture" id=69]
+[ext_resource path="res://art/player2/falling/0004.png" type="Texture" id=70]
+[ext_resource path="res://art/player2/falling/0011.png" type="Texture" id=71]
+[ext_resource path="res://art/player2/falling/0001.png" type="Texture" id=72]
+[ext_resource path="res://art/player2/falling/0015.png" type="Texture" id=73]
+[ext_resource path="res://art/player2/falling/0006.png" type="Texture" id=74]
+[ext_resource path="res://art/player2/falling/0007.png" type="Texture" id=75]
+[ext_resource path="res://art/player2/falling/0019.png" type="Texture" id=76]
+[ext_resource path="res://art/player2/falling/0005.png" type="Texture" id=77]
+[ext_resource path="res://art/player2/falling/0009.png" type="Texture" id=78]
+[ext_resource path="res://art/player2/falling/0003.png" type="Texture" id=79]
+[ext_resource path="res://art/player2/falling/0012.png" type="Texture" id=80]
+[ext_resource path="res://art/player2/falling/0000.png" type="Texture" id=81]
+[ext_resource path="res://art/player2/falling/0016.png" type="Texture" id=82]
+[ext_resource path="res://art/player2/falling/0008.png" type="Texture" id=83]
+[ext_resource path="res://art/player2/falling/0014.png" type="Texture" id=84]
+[ext_resource path="res://art/player2/falling/0013.png" type="Texture" id=85]
+[ext_resource path="res://art/player2/falling/0017.png" type="Texture" id=86]
+[ext_resource path="res://art/player2/firing/0005.png" type="Texture" id=87]
+[ext_resource path="res://art/player2/firing/0006.png" type="Texture" id=88]
+[ext_resource path="res://art/player2/firing/0016.png" type="Texture" id=89]
+[ext_resource path="res://art/player2/firing/0008.png" type="Texture" id=90]
+[ext_resource path="res://art/player2/firing/0004.png" type="Texture" id=91]
+[ext_resource path="res://art/player2/firing/0003.png" type="Texture" id=92]
+[ext_resource path="res://art/player2/firing/0017.png" type="Texture" id=93]
+[ext_resource path="res://art/player2/firing/0012.png" type="Texture" id=94]
+[ext_resource path="res://art/player2/firing/0011.png" type="Texture" id=95]
+[ext_resource path="res://art/player2/firing/0010.png" type="Texture" id=96]
+[ext_resource path="res://art/player2/firing/0014.png" type="Texture" id=97]
+[ext_resource path="res://art/player2/firing/0002.png" type="Texture" id=98]
+[ext_resource path="res://art/player2/firing/0013.png" type="Texture" id=99]
+[ext_resource path="res://art/player2/firing/0015.png" type="Texture" id=100]
+[ext_resource path="res://art/player2/firing/0007.png" type="Texture" id=101]
+[ext_resource path="res://art/player2/firing/0009.png" type="Texture" id=102]
+[ext_resource path="res://art/player2/firing/0001.png" type="Texture" id=103]
+[ext_resource path="res://art/player2/firing/0019.png" type="Texture" id=104]
+[ext_resource path="res://art/player2/firing/0020.png" type="Texture" id=105]
+[ext_resource path="res://art/player2/firing/0018.png" type="Texture" id=106]
 
 [sub_resource type="DynamicFont" id=1]
 size = 52
@@ -11,7 +114,11 @@ use_filter = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 27
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
 
@@ -21,14 +128,56 @@ use_filter = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 31
+font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 21 ), ExtResource( 66 ), ExtResource( 4 ), ExtResource( 30 ), ExtResource( 50 ), ExtResource( 41 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 64 ), ExtResource( 31 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 33 ), ExtResource( 22 ), ExtResource( 51 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "1",
+"speed": 35.0
+}, {
+"frames": [ ExtResource( 55 ), ExtResource( 14 ), ExtResource( 45 ), ExtResource( 63 ), ExtResource( 54 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 57 ), ExtResource( 12 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 59 ), ExtResource( 10 ), ExtResource( 58 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "2",
+"speed": 35.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 48 ), ExtResource( 28 ), ExtResource( 40 ), ExtResource( 56 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 29 ), ExtResource( 47 ), ExtResource( 27 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 46 ), ExtResource( 11 ), ExtResource( 32 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 36 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "0",
+"speed": 35.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 72 ), ExtResource( 67 ), ExtResource( 79 ), ExtResource( 70 ), ExtResource( 77 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 83 ), ExtResource( 78 ), ExtResource( 68 ), ExtResource( 71 ), ExtResource( 80 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 73 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 69 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "3",
+"speed": 35.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 103 ), ExtResource( 98 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 101 ), ExtResource( 90 ), ExtResource( 102 ), ExtResource( 96 ), ExtResource( 95 ), ExtResource( 94 ), ExtResource( 99 ), ExtResource( 97 ), ExtResource( 100 ), ExtResource( 89 ), ExtResource( 93 ), ExtResource( 106 ), ExtResource( 104 ), ExtResource( 105 ) ],
+"loop": true,
+"name": "0",
+"speed": 35.0
+} ]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="InfoPanel" type="CanvasLayer" parent="."]
-offset = Vector2( 0, 736 )
-transform = Transform2D( 1, 0, 0, 1, 0, 736 )
+offset = Vector2( 0, 680 )
+transform = Transform2D( 1, 0, 0, 1, 0, 680 )
 script = ExtResource( 3 )
 
 [node name="background2" type="ColorRect" parent="InfoPanel"]
@@ -97,11 +246,19 @@ color = Color( 0.27451, 0.27451, 0.27451, 1 )
 
 [node name="Start" type="Button" parent="HUD"]
 margin_left = 8.0
-margin_top = 688.0
-margin_right = 112.0
-margin_bottom = 728.0
+margin_top = 648.0
+margin_right = 80.0
+margin_bottom = 674.0
 custom_fonts/font = SubResource( 3 )
 text = "Play"
+
+[node name="Help" type="Button" parent="HUD"]
+margin_left = 96.0
+margin_top = 648.0
+margin_right = 168.0
+margin_bottom = 674.0
+custom_fonts/font = SubResource( 9 )
+text = "Help"
 
 [node name="Message" type="Label" parent="HUD"]
 anchor_top = 0.5
@@ -118,11 +275,148 @@ valign = 1
 
 [node name="Fullscreen" type="Button" parent="HUD"]
 margin_left = 1008.0
-margin_top = 688.0
+margin_top = 648.0
 margin_right = 1112.0
-margin_bottom = 728.0
+margin_bottom = 674.0
 custom_fonts/font = SubResource( 4 )
 text = "Fullscreen"
 
+[node name="HelpDisplay" type="Panel" parent="HUD"]
+visible = false
+margin_left = 248.0
+margin_top = 96.0
+margin_right = 840.0
+margin_bottom = 608.0
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="HUD/HelpDisplay"]
+anchor_left = 0.310811
+anchor_top = 0.269231
+anchor_right = 0.822635
+anchor_bottom = 0.346154
+margin_top = 22.1538
+margin_right = 125.591
+margin_bottom = 39.4083
+custom_fonts/font = SubResource( 5 )
+text = "Run on earth grounds and concrete"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label3" type="Label" parent="HUD/HelpDisplay"]
+anchor_left = 0.3125
+anchor_top = 0.466346
+anchor_right = 0.827703
+anchor_bottom = 0.543269
+margin_top = 3.23077
+margin_bottom = 3.23077
+custom_fonts/font = SubResource( 5 )
+text = "Climb the ladders and use the ropes"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label4" type="Label" parent="HUD/HelpDisplay"]
+anchor_left = 0.310811
+anchor_top = 0.673077
+anchor_right = 0.969595
+anchor_bottom = 0.75
+margin_top = -16.6154
+margin_bottom = -16.6154
+custom_fonts/font = SubResource( 5 )
+text = "Collect treasures to access the upper ladder"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label5" type="Label" parent="HUD/HelpDisplay"]
+anchor_left = 0.3125
+anchor_top = 0.860577
+anchor_right = 0.890203
+anchor_bottom = 0.9375
+margin_top = -34.6154
+margin_bottom = -34.6154
+custom_fonts/font = SubResource( 5 )
+text = "Use space tu shoot and destroy grounds"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label2" type="Label" parent="HUD/HelpDisplay"]
+anchor_left = 0.310811
+anchor_top = 0.0769231
+anchor_right = 0.886824
+anchor_bottom = 0.153846
+margin_top = 40.6154
+margin_bottom = 40.6154
+custom_fonts/font = SubResource( 5 )
+text = "Use Arrows to move, climb and use ropes"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label6" type="Label" parent="HUD/HelpDisplay"]
+anchor_left = -0.270047
+anchor_top = -3.76525
+anchor_right = 0.466579
+anchor_bottom = -3.69899
+margin_left = 167.868
+margin_top = 1943.81
+margin_right = 315.785
+margin_bottom = 1961.06
+custom_fonts/font = SubResource( 6 )
+text = "Help"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Timer" type="Timer" parent="HUD/HelpDisplay"]
+wait_time = 2.0
+autostart = true
+
+[node name="TileMap" type="TileMap" parent="HUD/HelpDisplay"]
+position = Vector2( 40, 160 )
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 40, 40 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 2, 12, 0, 131072, 5, 0, 131074, 3, 0, 262145, 10, 0 )
+
+[node name="Close" type="Button" parent="HUD/HelpDisplay"]
+margin_left = 248.0
+margin_top = 472.0
+margin_right = 320.0
+margin_bottom = 498.0
+custom_fonts/font = SubResource( 3 )
+text = "Close"
+
+[node name="Moves" type="Area2D" parent="HUD/HelpDisplay"]
+position = Vector2( 96, 104 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="HUD/HelpDisplay/Moves"]
+frames = SubResource( 7 )
+animation = "0"
+frame = 14
+playing = true
+
+[node name="Shoot" type="Area2D" parent="HUD/HelpDisplay"]
+position = Vector2( 88, 400 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="HUD/HelpDisplay/Shoot"]
+position = Vector2( 8, 24 )
+frames = SubResource( 8 )
+animation = "0"
+frame = 16
+playing = true
+
 [connection signal="pressed" from="HUD/Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="HUD/Help" to="HUD/HelpDisplay" method="_on_Help_pressed"]
 [connection signal="pressed" from="HUD/Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="timeout" from="HUD/HelpDisplay/Timer" to="HUD/HelpDisplay" method="_on_Timer_timeout"]
+[connection signal="pressed" from="HUD/HelpDisplay/Close" to="HUD/HelpDisplay" method="_on_Close_pressed"]

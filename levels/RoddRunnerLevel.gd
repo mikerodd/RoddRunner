@@ -19,7 +19,6 @@ var frame = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	if (get_tree().current_scene == self):
 		#debug mode of a level, create a keyboard component and pass it
 		var key = preload("res://components/KeyboardInputComponent.tscn")
@@ -27,12 +26,6 @@ func _ready():
 		initialize(myinstance)
 		start_level()
 
-
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	$Label.text = String(frame)
-#	frame += 1
-#	print("frame : %d" % frame)
 
 
 

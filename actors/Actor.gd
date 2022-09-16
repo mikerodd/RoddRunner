@@ -10,7 +10,6 @@ var game_is_on = false
 
 var velocity = Vector2.ZERO
 
-var can_climb_destroyed = false
 
 var tile_size_x
 var tile_size_y
@@ -159,7 +158,7 @@ func manage_leftright(_delta, _act):
 	
 func manage_updown(_delta, _act):
 	if _act in [action.up,action.down]:
-		if  (_tilemap.is_tile_climbable(next_obstacle_pos, can_climb_destroyed) or \
+		if  (_tilemap.is_tile_climbable(next_obstacle_pos) or \
 			 _tilemap.is_tile_rope(next_obstacle_pos)) \
 			and test_other_causes(next_obstacle_pos):
 			velocity = rel_vectors[_act]  * base_speed

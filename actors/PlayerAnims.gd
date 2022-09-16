@@ -1,5 +1,6 @@
 extends "res://actors/ActorAnims.gd"
 
+class_name PlayerAnims
 
 
 

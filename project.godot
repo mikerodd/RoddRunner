@@ -24,10 +24,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://actors/Foe.gd"
 }, {
+"base": "AnimatedSprite",
+"class": "LaserAnim",
+"language": "GDScript",
+"path": "res://actors/Laser.gd"
+}, {
 "base": "Actor",
 "class": "Player",
 "language": "GDScript",
 "path": "res://actors/Player.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "PlayerAnims",
+"language": "GDScript",
+"path": "res://actors/PlayerAnims.gd"
 }, {
 "base": "Node2D",
 "class": "RoddRunnerLevel",
@@ -43,7 +53,9 @@ _global_script_class_icons={
 "Actor": "",
 "Actor_Save": "",
 "Foe": "",
+"LaserAnim": "",
 "Player": "",
+"PlayerAnims": "",
 "RoddRunnerLevel": "",
 "RoddRunnerTilemap": ""
 }
@@ -57,7 +69,7 @@ config/icon="res://icon.png"
 [display]
 
 window/size/width=1120
-window/size/height=800
+window/size/height=744
 window/vsync/use_vsync=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"

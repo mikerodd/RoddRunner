@@ -14,11 +14,11 @@ var is_demo_mode = true
 var player_keyboard = preload("res://components/KeyboardInputComponent.tscn")
 var player_scripted = preload("res://components/ScriptedPlayerComponent.tscn")
 
-var instructions1 = ["right",Vector2(23,16), "still", Vector2(0,0), "fire", Vector2(0,0), \
-					"waitfoe",Vector2(25,17), "right", Vector2(26,16),"up", Vector2(27,14), \
-					"left", Vector2(20,14)  , "up", Vector2(20,8), "left",Vector2(14,8), \
-					"up", Vector2(14,5),"left",Vector2(11,5),"down",Vector2(11,11) ,\
-					"left",Vector2(9,11)]
+var instructions1 = ["right",Vector2(23,14), "still", Vector2(0,0), "fire", Vector2(0,0), \
+					"waitfoe",Vector2(25,15), "right", Vector2(26,14),"up", Vector2(27,12), \
+					"left", Vector2(20,12)  , "up", Vector2(20,6), "left",Vector2(14,6), \
+					"up", Vector2(14,3),"left",Vector2(11,3),"down",Vector2(11,9) ,\
+					"left",Vector2(9,9)]
 
 var instructions2 = ["right",Vector2(15,16), "left", Vector2(14,16), "still", Vector2(0,0), \
 					"fire", Vector2(0,0), "waitfoe",Vector2(13,17), "left", Vector2(12,16), \
@@ -45,7 +45,7 @@ func _ready():
 
 func start_demo_level():
 	var rng = RandomNumberGenerator.new()
-	var rand_level = rng.randi_range(1,2)
+	var rand_level = 1 #rng.randi_range(1,2)
 	is_demo_mode = true
 	display_message("RODD RUNNER",true)
 	

@@ -32,12 +32,27 @@ func initialize_player(var _tm,var _in, var _g):
 
 
 func i_m_dead():
+	$Dead.play()
 	$Blink.start()
 	emit_signal("stop_level",true)
 
 func crushed():
 	i_m_dead()
 
+
+func manage_fall2(delta, _act):
+	var save_move = ongoing_move
+	.manage_fall2(delta, _act)
+	if ongoing_move == action.fall and save_move != action.fall:
+		$Falling.play()
+		
+func manage_stop_falling(_delta, _act):
+	var save_move = ongoing_move
+	.manage_stop_falling(_delta, _act)
+	if ongoing_move != action.fall and save_move == action.fall:
+		$Falling.stop()
+		
+	
 
 func manage_leftright(delta, _act):
 	if grace_period > 0:
@@ -57,7 +72,7 @@ func manage_leftright(delta, _act):
 				grace_period = 0.08
 				return 
 				
-		elif ongoing_move == action.still and \
+		if ongoing_move == action.still and \
 			what_facing == facing.right and \
 			is_between_tiles == between.NONE and \
 			_act == action.left:
@@ -68,7 +83,8 @@ func manage_leftright(delta, _act):
 				$Anims.play_still_left()
 				grace_period = 0.08
 				return
-	
+		
+
 	.manage_leftright(delta, _act)
 	
 
@@ -79,7 +95,7 @@ func manage_leftright(delta, _act):
 func manage_moves(delta,_act):
 	if _tilemap.did_i_get_treasure(current_pos):
 		emit_signal("i_won_points","treasure")
-		
+		$Treasure.play()
 	if current_pos == end_level_pos and _tilemap.treasure_count == 0:
 		$Anims.stop()
 		emit_signal("i_won_points","level_won")
@@ -94,6 +110,9 @@ func manage_moves(delta,_act):
 				$Anims.play_fire_left()
 				_tilemap.desintegrate_brick(pointing_at)
 				is_firing = true 
+				$LaserGun.play()
+				$Rocks.play()
+
 
 		elif what_facing == facing.right and ongoing_move == action.still:
 			pointing_at = _tilemap.world_to_map(position) + Vector2(1,1) 
@@ -102,9 +121,11 @@ func manage_moves(delta,_act):
 				$Anims.play_fire_right()
 				_tilemap.desintegrate_brick(pointing_at)
 				is_firing = true
-								
-	if not is_firing:	
-		 .manage_moves(delta, _act)
+				$LaserGun.play()
+				$Rocks.play()
+	
+	if not is_firing:
+		.manage_moves(delta, _act)
 	else:
 		$Laser.fire($Anims.flip_h)
 
@@ -121,4 +142,5 @@ func _on_Player_area_entered(_area):
 
 
 func _on_Blink_timeout():
-	visible = not visible
+	if get_parent().name != "Help":
+		visible = not visible

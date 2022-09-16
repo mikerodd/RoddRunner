@@ -5,7 +5,8 @@ var label
 
 var deblock : bool = false
 var is_trapped : bool = false
-
+var has_treasure : bool = false
+var rng = RandomNumberGenerator.new()
 enum foe_action {left, right, up, down, still, fire, fall, blocked, outing1, outing2, outing3}
 
 var foe_rel_vectors = {0:Vector2(-1,0), 1:Vector2(1, 0), 2:Vector2(0,-1), \
@@ -17,15 +18,12 @@ func initialize(var _tm,var _in):
 	$FoeLabel.text = name
 	label = $FoeLabel.text
 	base_speed *= 0.5
+	rng.randomize()
+	
 	.initialize(_tm, _in)
-	can_climb_destroyed = true
+
 	
 
-#func _process(delta):
-#
-#	._process(delta)
-#	var test = velocity * delta 
-#	print ("foe : %s, delta : %f velocity * delta :(%f, %f) ", [name, delta, test.x, test.y ])
 
 func test_other_causes(_pos):
 #	print("foe : %s, checking : (%d,%d) " % [name, _pos.x, _pos.y])
@@ -70,8 +68,12 @@ func crushed():
 
 func manage_stop_falling(_delta, _act):
 	if _tilemap.is_tile_destroyed(current_pos):
+		if has_treasure:
+			var tmp = Vector2(current_pos.x, current_pos.y -1)		
+			_tilemap.release_treasure(tmp)
+			has_treasure = false
+		
 		is_trapped = true
-		can_climb_destroyed = false
 		ongoing_move = foe_action.blocked
 		immobilize_me(true)
 		$BlockedTimer.start()
@@ -84,7 +86,15 @@ func manage_stop_falling(_delta, _act):
 	
 func manage_moves(delta, _act):
 
-	log_me("begin")
+	#log_me("begin")
+
+
+
+	if _tilemap.is_tile_contains_treasure(current_pos) and not has_treasure:
+		if rng.randi_range(1, 1000) == 150:
+			if _tilemap.get_treasure(current_pos):
+				has_treasure = true
+
 
 	if deblock:
 		deblock = false
@@ -144,4 +154,3 @@ func manage_moves(delta, _act):
 
 func _on_BlockedTimer_timeout():
 	deblock =true 
-	can_climb_destroyed = true

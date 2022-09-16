@@ -1,5 +1,6 @@
 extends AnimatedSprite
 
+class_name LaserAnim
 
 # Declare member variables here. Examples:
 # var a = 2
