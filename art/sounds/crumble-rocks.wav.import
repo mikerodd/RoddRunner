@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/crumble-rocks.wav-7992f2c254e241748028913020e8b0f7.sample"
+
+[deps]
+
+source_file="res://art/sounds/crumble-rocks.wav"
+dest_files=[ "res://.import/crumble-rocks.wav-7992f2c254e241748028913020e8b0f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

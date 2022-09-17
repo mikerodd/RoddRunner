@@ -402,7 +402,7 @@ position = Vector2( 96, 104 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="HUD/HelpDisplay/Moves"]
 frames = SubResource( 7 )
 animation = "0"
-frame = 14
+frame = 16
 playing = true
 
 [node name="Shoot" type="Area2D" parent="HUD/HelpDisplay"]
@@ -412,7 +412,7 @@ position = Vector2( 88, 400 )
 position = Vector2( 8, 24 )
 frames = SubResource( 8 )
 animation = "0"
-frame = 16
+frame = 18
 playing = true
 
 [connection signal="pressed" from="HUD/Start" to="." method="_on_Button_pressed"]

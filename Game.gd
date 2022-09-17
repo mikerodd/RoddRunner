@@ -48,8 +48,8 @@ func start_demo_level():
 	var rand_level = 1 #rng.randi_range(1,2)
 	is_demo_mode = true
 	display_message("RODD RUNNER",true)
-	
-	current_level_template = load("res://levels/Level" + String(rand_level) +".tscn")
+	var lvl = "res://levels/Level" + String(rand_level) +".tscn"
+	current_level_template = load(lvl)
 	level_instance = current_level_template.instance()
 	add_child(level_instance)
 	var play_component = player_scripted.instance()
